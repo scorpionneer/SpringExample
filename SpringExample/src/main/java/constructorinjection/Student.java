@@ -3,6 +3,7 @@ package constructorinjection;
 public class Student {
 	private Integer id;
 	private String name;
+	private Address address;
 	
 	public Student() {
 	}
@@ -15,12 +16,13 @@ public class Student {
 		this.id=id;
 	}
 
-	public Student(String name,Integer id) {
+	public Student(String name,Integer id,Address address) {
 		this.id=id;
 		this.name=name;
+		this.address=address;
 	}
 
 	public String getDetails() {
-		return this.id+":"+this.name;
+		return this.id+":"+this.name+":"+this.address;
 	}
 }

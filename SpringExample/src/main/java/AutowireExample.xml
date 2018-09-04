@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<description>Autowiring can be done in 4 ways 
+1. byName : bean name should be equal to property name
+2. byType : bean name can be different it will do autowiring using type
+3. constructor: it calls the constructor with max args
+4. no : no autowiring and it's default
+</description>	
+	<bean id="student" class="autowireexample.Student"
+		autowire="byName">
+		<property name="name" value="Neerav"></property>
+		<property name="rollno" value="1"></property>
+	</bean>
+	<bean id="address" class="autowireexample.Address">
+		<property name="city" value="Pune"></property>
+		<property name="state" value="MH"></property>
+		<property name="country" value="India"></property>
+	</bean>
+</beans>
